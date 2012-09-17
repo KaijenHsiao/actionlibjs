@@ -75,7 +75,7 @@ var ActionClient = function(options) {
   actionClient.cancel = function() {
     var cancelMessage = new ros.Message({});
     actionClient.cancelTopic.publish(cancelMessage);
-  }
+  };
 
   actionClient.Goal = function(goalMsg) {
     var goal = this;
