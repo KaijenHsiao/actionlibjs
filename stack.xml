@@ -1,0 +1,9 @@
+<stack>
+	<description brief="A pure Javascript implementation of actionlib resources using roses as a backend.">A pure Javascript implementation of actionlib resources using roses as a backend.</description>
+	<author>Russell Toris</author>
+	<license>BSD</license>  
+	<review status="unreviewed" notes="" />
+	<url>http://ros.org/wiki/actionlibjs</url>
+
+	<depend stack="ros" />
+</stack>
