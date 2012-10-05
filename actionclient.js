@@ -33,11 +33,22 @@
  *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
  *
- *   Author: Russell Toris, Brandon Alexander
+ *  Author: Russell Toris, Brandon Alexander
  *  Version: September 17, 2012
+ *
+ *  AMDfied by Jihoon
+ *  Version : September 27, 2012
  *
  *********************************************************************/
 
+(function (root, factory) {
+    if(typeof define === 'function' && define.amd) {
+        define(['eventemitter2'],factory);
+    }
+    else {
+        root.ActionClient = factory(root.EventEmitter2);
+    }
+}(this, function(EventEmitter2) {
 var ActionClient = function(options) {
   var actionClient = this;
   options = options || {};
@@ -175,4 +186,6 @@ var ActionClient = function(options) {
 
 };
 ActionClient.prototype.__proto__ = EventEmitter2.prototype;
-
+return ActionClient;
+}
+));
